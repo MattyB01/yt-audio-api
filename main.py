@@ -13,6 +13,11 @@ from pathlib import Path
 import yt_dlp
 import access_manager
 from constants import *
+from flask import Flask
+from flask_cors import CORS # 1. Import CORS
+
+app = Flask(__name__)
+CORS(app) # 2. Enable CORS for all routes
 
 # Initialize the Flask application
 app = Flask(__name__)
